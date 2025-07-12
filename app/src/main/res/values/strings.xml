@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Todo List</string>
+    <string name="add_todo">Add Todo</string>
+    <string name="todo_hint">Enter your todo here...</string>
+    <string name="filter_all">All</string>
+    <string name="filter_active">Active</string>
+    <string name="filter_completed">Completed</string>
+    <string name="delete_todo">Delete</string>
+    <string name="mark_completed">Mark as completed</string>
+    <string name="mark_active">Mark as active</string>
+    <string name="no_todos">No todos found</string>
+</resources> 
