@@ -1,6 +1,11 @@
 package com.example.todolist.ui.components
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
@@ -13,6 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.todolist.ui.theme.TodoListAndroidComposeTheme
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
@@ -70,5 +77,26 @@ fun AddTodoInput(
                 )
             }
         }
+    }
+}
+
+@Preview(showBackground = true, name = "Add Todo Input Default")
+@Composable
+fun AddTodoInputPreview() {
+    TodoListAndroidComposeTheme {
+        AddTodoInput(
+            onAddTodo = { /* Preview - no action needed */ }
+        )
+    }
+}
+
+@Preview(showBackground = true, name = "Add Todo Input with Custom Padding")
+@Composable
+fun AddTodoInputPreviewWithPadding() {
+    TodoListAndroidComposeTheme {
+        AddTodoInput(
+            onAddTodo = { /* Preview - no action needed */ },
+            modifier = Modifier.padding(8.dp)
+        )
     }
 } 
