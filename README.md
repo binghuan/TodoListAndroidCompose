@@ -106,4 +106,9 @@ app/src/main/java/com/example/todolist/
 - Supports offline usage, data won't be lost
 - Reactive data flow with real-time UI updates
 
-This project demonstrates how to build a fully functional, architecturally sound application using modern Android development technologies, including a complete data persistence solution. 
+This project demonstrates how to build a fully functional, architecturally sound application using modern Android development technologies, including a complete data persistence solution.
+
+## 📚 Learning Resources
+
+- **[Complete Tutorial & Code Flow](TUTORIAL.md)** - Detailed explanation of project architecture and code execution flow
+- **[Demo Screenshot](README/demo.png)** - Visual preview of the application 
