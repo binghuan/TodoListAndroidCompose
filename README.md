@@ -2,6 +2,12 @@
 
 A modern Android Todo List application built with **MVI Architecture** and **Jetpack Compose**.
 
+## Demo
+
+<div align="center">
+  <img src="README/demo.png" alt="Todo List App Demo" width="300"/>
+</div>
+
 ## Features
 
 - ✅ Add new todo items
