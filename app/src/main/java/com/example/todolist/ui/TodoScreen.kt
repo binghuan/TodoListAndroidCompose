@@ -24,9 +24,11 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.todolist.R
 import com.example.todolist.model.TodoFilter
 import com.example.todolist.model.TodoItem
 import com.example.todolist.mvi.TodoIntent
@@ -129,7 +131,7 @@ fun TodoScreenContent(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Todo List") },
+                title = { Text(stringResource(R.string.todo_list_title)) },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer
@@ -177,7 +179,7 @@ fun TodoScreenContent(
                             color = MaterialTheme.colorScheme.onSecondaryContainer
                         )
                         Text(
-                            text = "Total",
+                            text = stringResource(R.string.stats_total),
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSecondaryContainer
                         )
@@ -190,7 +192,7 @@ fun TodoScreenContent(
                             color = MaterialTheme.colorScheme.onSecondaryContainer
                         )
                         Text(
-                            text = "Active",
+                            text = stringResource(R.string.stats_active),
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSecondaryContainer
                         )
@@ -203,7 +205,7 @@ fun TodoScreenContent(
                             color = MaterialTheme.colorScheme.onSecondaryContainer
                         )
                         Text(
-                            text = "Completed",
+                            text = stringResource(R.string.stats_completed),
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSecondaryContainer
                         )
@@ -223,9 +225,9 @@ fun TodoScreenContent(
                 ) {
                     Text(
                         text = when (state.filter) {
-                            TodoFilter.ALL -> "No todos yet. Add one above!"
-                            TodoFilter.ACTIVE -> "No active todos"
-                            TodoFilter.COMPLETED -> "No completed todos"
+                            TodoFilter.ALL -> stringResource(R.string.no_todos_all)
+                            TodoFilter.ACTIVE -> stringResource(R.string.no_todos_active)
+                            TodoFilter.COMPLETED -> stringResource(R.string.no_todos_completed)
                         },
                         style = MaterialTheme.typography.bodyLarge,
                         color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),

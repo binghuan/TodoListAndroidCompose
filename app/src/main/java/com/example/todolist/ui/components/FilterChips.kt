@@ -13,7 +13,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.todolist.R
 import com.example.todolist.model.TodoFilter
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.todolist.ui.theme.TodoListAndroidComposeTheme
@@ -34,26 +36,26 @@ fun FilterChips(
         FilterChip(
             selected = currentFilter == TodoFilter.ALL,
             onClick = { onFilterChange(TodoFilter.ALL) },
-            label = { Text("All") }
+            label = { Text(stringResource(R.string.filter_all)) }
         )
         
         FilterChip(
             selected = currentFilter == TodoFilter.ACTIVE,
             onClick = { onFilterChange(TodoFilter.ACTIVE) },
-            label = { Text("Active") }
+            label = { Text(stringResource(R.string.filter_active)) }
         )
         
         FilterChip(
             selected = currentFilter == TodoFilter.COMPLETED,
             onClick = { onFilterChange(TodoFilter.COMPLETED) },
-            label = { Text("Completed") }
+            label = { Text(stringResource(R.string.filter_completed)) }
         )
     }
 }
 
 @Preview(showBackground = true, name = "Filter Chips - All Selected")
 @Composable
-fun FilterChipsAllSelectedPreview() {
+fun FilterChipsAllPreview() {
     TodoListAndroidComposeTheme {
         FilterChips(
             currentFilter = TodoFilter.ALL,
@@ -64,7 +66,7 @@ fun FilterChipsAllSelectedPreview() {
 
 @Preview(showBackground = true, name = "Filter Chips - Active Selected")
 @Composable
-fun FilterChipsActiveSelectedPreview() {
+fun FilterChipsActivePreview() {
     TodoListAndroidComposeTheme {
         FilterChips(
             currentFilter = TodoFilter.ACTIVE,
@@ -75,7 +77,7 @@ fun FilterChipsActiveSelectedPreview() {
 
 @Preview(showBackground = true, name = "Filter Chips - Completed Selected")
 @Composable
-fun FilterChipsCompletedSelectedPreview() {
+fun FilterChipsCompletedPreview() {
     TodoListAndroidComposeTheme {
         FilterChips(
             currentFilter = TodoFilter.COMPLETED,
@@ -84,42 +86,25 @@ fun FilterChipsCompletedSelectedPreview() {
     }
 }
 
-@Preview(showBackground = true, name = "Filter Chips - All States")
+@Preview(showBackground = true, name = "Filter Chips - Combined View")
 @Composable
-fun FilterChipsAllStatesPreview() {
+fun FilterChipsCombinedPreview() {
     TodoListAndroidComposeTheme {
-        Column(
-            modifier = Modifier.padding(16.dp)
-        ) {
-            Text(
-                text = "All Selected",
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(bottom = 8.dp)
-            )
+        Column {
             FilterChips(
                 currentFilter = TodoFilter.ALL,
                 onFilterChange = { /* Preview - no action needed */ }
             )
             
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(8.dp))
             
-            Text(
-                text = "Active Selected",
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(bottom = 8.dp)
-            )
             FilterChips(
                 currentFilter = TodoFilter.ACTIVE,
                 onFilterChange = { /* Preview - no action needed */ }
             )
             
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(8.dp))
             
-            Text(
-                text = "Completed Selected",
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(bottom = 8.dp)
-            )
             FilterChips(
                 currentFilter = TodoFilter.COMPLETED,
                 onFilterChange = { /* Preview - no action needed */ }

@@ -1,0 +1,33 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">待辦事項</string>
+    
+    <!-- Main Screen -->
+    <string name="todo_list_title">待辦事項</string>
+    
+    <!-- Add Todo Input -->
+    <string name="add_todo">新增待辦</string>
+    <string name="todo_hint">在此輸入您的待辦事項...</string>
+    <string name="add_todo_description">新增待辦事項</string>
+    
+    <!-- Filter Chips -->
+    <string name="filter_all">全部</string>
+    <string name="filter_active">進行中</string>
+    <string name="filter_completed">已完成</string>
+    
+    <!-- Stats -->
+    <string name="stats_total">總計</string>
+    <string name="stats_active">進行中</string>
+    <string name="stats_completed">已完成</string>
+    
+    <!-- Empty States -->
+    <string name="no_todos_all">尚無待辦事項，請在上方新增一個！</string>
+    <string name="no_todos_active">無進行中的待辦事項</string>
+    <string name="no_todos_completed">無已完成的待辦事項</string>
+    
+    <!-- Todo Item Actions -->
+    <string name="delete_todo">刪除</string>
+    <string name="delete_todo_description">刪除待辦事項</string>
+    <string name="mark_completed">標記為已完成</string>
+    <string name="mark_active">標記為進行中</string>
+</resources> 

@@ -18,8 +18,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
+import com.example.todolist.R
 import com.example.todolist.model.TodoItem
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.todolist.ui.theme.TodoListAndroidComposeTheme
@@ -71,7 +73,7 @@ fun TodoItemCard(
             ) {
                 Icon(
                     imageVector = Icons.Default.Delete,
-                    contentDescription = "Delete todo",
+                    contentDescription = stringResource(R.string.delete_todo_description),
                     tint = MaterialTheme.colorScheme.error
                 )
             }
@@ -103,7 +105,7 @@ fun TodoItemCardCompletedPreview() {
         TodoItemCard(
             todoItem = TodoItem(
                 id = "2",
-                title = "Finish Android project documentation",
+                title = "Finish homework assignment",
                 isCompleted = true,
                 timestamp = System.currentTimeMillis() - 1000
             ),
@@ -120,7 +122,7 @@ fun TodoItemCardLongTitlePreview() {
         TodoItemCard(
             todoItem = TodoItem(
                 id = "3",
-                title = "This is a very long todo item title that should wrap properly and demonstrate how the card handles longer text content",
+                title = "This is a very long todo item title that demonstrates how the card handles extended text content",
                 isCompleted = false,
                 timestamp = System.currentTimeMillis() - 2000
             ),
@@ -152,17 +154,6 @@ fun TodoItemCardMultiplePreview() {
                     title = "Completed todo item",
                     isCompleted = true,
                     timestamp = System.currentTimeMillis() - 1000
-                ),
-                onToggle = { /* Preview - no action needed */ },
-                onDelete = { /* Preview - no action needed */ }
-            )
-            
-            TodoItemCard(
-                todoItem = TodoItem(
-                    id = "3",
-                    title = "Another active item",
-                    isCompleted = false,
-                    timestamp = System.currentTimeMillis() - 2000
                 ),
                 onToggle = { /* Preview - no action needed */ },
                 onDelete = { /* Preview - no action needed */ }

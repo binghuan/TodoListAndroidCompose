@@ -1,12 +1,33 @@
 <resources>
+    <!-- App Name -->
     <string name="app_name">Todo List</string>
+    
+    <!-- Main Screen -->
+    <string name="todo_list_title">Todo List</string>
+    
+    <!-- Add Todo Input -->
     <string name="add_todo">Add Todo</string>
     <string name="todo_hint">Enter your todo here...</string>
+    <string name="add_todo_description">Add todo</string>
+    
+    <!-- Filter Chips -->
     <string name="filter_all">All</string>
     <string name="filter_active">Active</string>
     <string name="filter_completed">Completed</string>
+    
+    <!-- Stats -->
+    <string name="stats_total">Total</string>
+    <string name="stats_active">Active</string>
+    <string name="stats_completed">Completed</string>
+    
+    <!-- Empty States -->
+    <string name="no_todos_all">No todos yet. Add one above!</string>
+    <string name="no_todos_active">No active todos</string>
+    <string name="no_todos_completed">No completed todos</string>
+    
+    <!-- Todo Item Actions -->
     <string name="delete_todo">Delete</string>
+    <string name="delete_todo_description">Delete todo</string>
     <string name="mark_completed">Mark as completed</string>
     <string name="mark_active">Mark as active</string>
-    <string name="no_todos">No todos found</string>
 </resources> 

@@ -16,9 +16,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.todolist.R
 import com.example.todolist.ui.theme.TodoListAndroidComposeTheme
 
 @OptIn(ExperimentalComposeUiApi::class)
@@ -45,7 +47,7 @@ fun AddTodoInput(
             OutlinedTextField(
                 value = todoText,
                 onValueChange = { todoText = it },
-                placeholder = { Text("Enter your todo here...") },
+                placeholder = { Text(stringResource(R.string.todo_hint)) },
                 modifier = Modifier.weight(1f),
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
                 keyboardActions = KeyboardActions(
@@ -73,7 +75,7 @@ fun AddTodoInput(
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
-                    contentDescription = "Add todo"
+                    contentDescription = stringResource(R.string.add_todo_description)
                 )
             }
         }
